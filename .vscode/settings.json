@@ -1,0 +1,25 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=C0103", // invalid-name
+        "--disable=C0111", // missing-docstring
+        "--disable=C0301", // line-too-long
+        "--disable=W0601", // global-variable-undefined
+    ],
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+    },
+    "black-formatter.args": [
+        "--line-length", "100",
+    ],
+    "isort.args": [
+        "--profile", "black",
+        "--force-grid-wrap", "2",
+    ],
+    "notebook.experimental.outputScrolling": true,
+    "notebook.output.textLineLimit": 1000,
+}
