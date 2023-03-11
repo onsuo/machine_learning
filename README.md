@@ -7,6 +7,9 @@
 ### 사용된 package 목록
 
 - scikit-learn (v1.2.0)
-- pandas
-- matplotlib
-- numpy
+- pandas (v1.5.2)
+- matplotlib (v3.6.2)
+- numpy (v1.23.5)
+- streamlit (v1.16.0)
+- tmdbv3api (v1.7.7)
+- scikit-surpirse (v1.1.3)
