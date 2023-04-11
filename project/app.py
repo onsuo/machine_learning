@@ -8,6 +8,12 @@ from tmdbv3api import (
 )
 
 
+# This code defines a function called "get_recommendations" which takes a movie title as an input.
+# The function then finds the index of the corresponding movie in a pandas dataframe called "movies".
+# It then calculates the cosine similarity scores between the selected movie and all other movies in the dataframe using a pre-calculated cosine similarity matrix called "cosine_sim".
+# The function then sorts the similarity scores in descending order and selects the top 10 movies with the highest similarity scores (excluding the selected movie itself).
+# For each of these top 10 movies, the function retrieves details (including the movie title and poster image URL) using the "movie.details" function from a Python package called "tmdbsimple".
+# Finally, the function returns a tuple containing lists of movie poster image URLs and titles for the top 10 recommended movies.
 def get_recommendations(_title):
     _idx = movies[movies["title"] == _title].index[0]
     _sim_scores = list(enumerate(cosine_sim[_idx]))
